@@ -11,7 +11,6 @@ How to use?
 4.  run the twitter-downloader.py
 5.  Enter the page number you want to download. (1 page = 20 tweeets)
     For example, it will download recent 20 tweets image if you enter 1.
-6.  Happy collection!
 
 Disclaimer:
 it is just for fun and may contains bug which user is expected to anticipate it.
