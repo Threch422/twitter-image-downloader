@@ -31,7 +31,7 @@ def user_liked_images(api,target):
     # Download it
     for index, images in enumerate(image_url, 1):
         file_name = user.path + images.split('?')[-2].split('/')[-1] + '.png'
-        #urllib.request.urlretrieve(images,file_name)
+        urllib.request.urlretrieve(images,file_name)
         #print(file_name + "   " + str(index) + " / " + str(len(image_url))) # Debug use
         print("Downloading: " + str(index) + " / " + str(len(image_url)))
     print("The download progress has been done.")
