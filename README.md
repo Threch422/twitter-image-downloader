@@ -1,5 +1,6 @@
 # twitter-image-downloader
-For self-use
+For self-use and for fun
+Update: 8/6/2020
 
 Ver 1.0
 1.  Support download images from authenticated user
