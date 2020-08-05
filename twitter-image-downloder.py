@@ -22,6 +22,7 @@ if (choice == 1):
     else:
         mf.user_liked_images(api, user.userID)
 elif (choice == 2):
-    tl.timeline_images(api, "muni_gurume")
+    #tl.timeline_images(api, "muni_gurume")
+    print("Not yet implemented.")
 else:
     print("Invalid input. The program will be terminated.")
