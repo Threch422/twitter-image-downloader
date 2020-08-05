@@ -4,29 +4,27 @@ import API_Tokens as token
 import user_info as user
 
 def user_liked_images(api,target):
-    required_pages = int(input("How many pages you want to download? (1 page = 20 tweets) "))
+    required_tweets = int(input("How many tweets you want to download? "))
 
     image_url = []
 
     # Main Progress
-    for i in range(required_pages):
+    # Getting info of your favourite tweets
+    liked_tweets = tweepy.Cursor(api.favorites, id = target).items(required_tweets)
 
-        # Getting info of your favourite tweets
-        liked_tweets = api.favorites(target, page = i + 1)
-
-        # Extracting image url 
-        for tweets in liked_tweets:
-            if tweets.entities.get('media', {}) != {}:
-                media_list = tweets.extended_entities.get('media', {})
-                for i in range(len(media_list)):
-                    if media_list[i].get('media_url', {}) != {} and media_list[i].get('type') == 'photo':
-                        original_path = media_list[i].get('media_url', {})
-                        if ".jpg" in original_path:
-                            fixed_path = original_path.split('.jpg')[0] + '?format=png&name=4096x4096'
-                        elif ".png" in original_path:
-                            fixed_path = original_path.split('.png')[0] + '?format=png&name=4096x4096'
-                        image_url.append(fixed_path)
-                        #print(tweets.extended_entities['media'])  # Debug use  
+    # Extracting image url 
+    for tweets in liked_tweets:
+        if tweets.entities.get('media', {}) != {}:
+            media_list = tweets.extended_entities.get('media', {})
+            for i in range(len(media_list)):
+                if media_list[i].get('media_url', {}) != {} and media_list[i].get('type') == 'photo':
+                    original_path = media_list[i].get('media_url', {})
+                    if ".jpg" in original_path:
+                        fixed_path = original_path.split('.jpg')[0] + '?format=png&name=4096x4096'
+                    elif ".png" in original_path:
+                        fixed_path = original_path.split('.png')[0] + '?format=png&name=4096x4096'
+                    image_url.append(fixed_path)
+                    #print(tweets.extended_entities['media'])  # Debug use  
 
     # Download it
     for index, images in enumerate(image_url, 1):
