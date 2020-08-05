@@ -5,8 +5,7 @@ Ver 1.0
 1.  Support download images from authenticated user
 
 Ver 1.1
-1. Sepearated code in different files.
-2. Support download images from specified user.
+1. Support download images from specified user.
 
 
 This tool is used to download the pictures you have liked in your Twitter account.
