@@ -16,6 +16,16 @@ Ver 1.2
 
 This tool is used to download the pictures you have liked in your Twitter account or from specific user.
 
+Requirments:
+1. Python 3.0 or above is required to run the tool.
+2. tweepy is required for this tool.
+
+Tutorial to install tweepy:
+1. Open your cmd and type
+    pip install tweepy
+    If the installation is completed. Then it is okay.
+If pip is not a command in your cmd, add python and Scripts file in PATH of your computer.
+
 How to use?
 1.  Apply for Twitter developer account to get your own API tokens and access tokens.
     It can be used to access your information in your twitter account.
