@@ -21,10 +21,8 @@ Requirments:
 2. tweepy is required for this tool.
 
 Tutorial to install tweepy:
-1. Open your cmd and type
-pip install tweepy
-If the installation is completed. Then it is okay.
-If pip is not a command in your cmd, add python and Scripts file in PATH of your computer.
+1. Open your cmd and type (pip install tweepy). If the installation is completed. Then it is okay.
+2. If pip is not a command in your cmd, add python and Scripts file in PATH of your computer.
 
 How to use?
 1.  Apply for Twitter developer account to get your own API tokens and access tokens.
