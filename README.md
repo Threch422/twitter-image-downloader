@@ -22,8 +22,8 @@ Requirments:
 
 Tutorial to install tweepy:
 1. Open your cmd and type
-    pip install tweepy
-    If the installation is completed. Then it is okay.
+pip install tweepy
+If the installation is completed. Then it is okay.
 If pip is not a command in your cmd, add python and Scripts file in PATH of your computer.
 
 How to use?
