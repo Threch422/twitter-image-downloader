@@ -1,13 +1,17 @@
 # twitter-image-downloader
 For self-use and for fun
 
-Update: 8/6/2020
+Update: 7/8/2020
 
 Ver 1.0
 1.  Support download images from authenticated user
 
 Ver 1.1
 1. Support download images from specified user.
+
+Ver 1.2
+1. Added checking file existance function. The tool will not download the same image again if that one already exists in directory.
+2. Bugs fixed.
 
 
 This tool is used to download the pictures you have liked in your Twitter account.
