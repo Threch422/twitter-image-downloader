@@ -14,7 +14,7 @@ Ver 1.2
 2. Bugs fixed.
 
 
-This tool is used to download the pictures you have liked in your Twitter account.
+This tool is used to download the pictures you have liked in your Twitter account or from specific user.
 
 How to use?
 1.  Apply for Twitter developer account to get your own API tokens and access tokens.
@@ -22,7 +22,7 @@ How to use?
 2.  Copy it to API_Tokens.py 
 3.  Enter the path where you want the images store in your computer and your userID in user_info.py
 4.  run the twitter-image-downloader.py
-5.  Enter the number of tweets you want to download.
+5.  Follow the instructions given by twitter-image-downloader.py.
 
 Disclaimer:
 it is just for fun and may contains bug which user is expected to anticipate it.
