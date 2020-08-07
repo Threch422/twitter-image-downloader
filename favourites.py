@@ -1,16 +1,16 @@
 import tweepy
 import urllib.request
+import os
 import API_Tokens as token
 import user_info as user
 
 def user_liked_images(api,target):
     required_tweets = int(input("How many tweets you want to download? "))
-
     image_url = []
 
     # Main Progress
     # Getting info of your favourite tweets
-    liked_tweets = tweepy.Cursor(api.favorites, id = target).items(required_tweets)
+    liked_tweets = tweepy.Cursor(api.favorites, id = target, tweet_mode = "extended").items(required_tweets)
 
     # Extracting image url 
     for tweets in liked_tweets:
@@ -29,6 +29,9 @@ def user_liked_images(api,target):
     # Download it
     for index, images in enumerate(image_url, 1):
         file_name = user.path + images.split('?')[-2].split('/')[-1] + '.png'
+        # Check image existance in directory. Preventing reprtitive downloading.
+        if (os.path.isfile(file_name)):
+            continue
         urllib.request.urlretrieve(images,file_name)
         #print(file_name + "   " + str(index) + " / " + str(len(image_url))) # Debug use
         print("Downloading: " + str(index) + " / " + str(len(image_url)))

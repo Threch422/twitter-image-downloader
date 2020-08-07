@@ -14,15 +14,18 @@ api = tweepy.API(auth)
 function1 = "1. Download images from specifc user favourited tweets\n"
 function2 = "2. Download images from specified user timeline\n"
 print("Here is the menu of this tool:\n", function1, function2)
-choice = int(input("What do you want to do with this tool? "))
+choice = int(input("What do you want to do with this tool? \n"))
 if (choice == 1):
-    target = input("Which user do you want to download from? If you want to download from your favourites, enter nth. Otherwise enter UserID ")
+    target = input("Which user do you want to download from? If you want to download from your favourites, enter nth. Otherwise enter UserID \n")
     if (user != {}):
         mf.user_liked_images(api, target)
     else:
         mf.user_liked_images(api, user.userID)
 elif (choice == 2):
-    #tl.timeline_images(api, "muni_gurume")
-    print("Not yet implemented.")
+    timeline_user = input("Which user do you want to download from? Default is @muni_gurume \n")
+    if (timeline_user != {}):
+        tl.timeline_images(api, timeline_user)
+    else:
+        tl.timeline_images(api, "muni_gurume")
 else:
-    print("Invalid input. The program will be terminated.")
+    print("Invalid input. The program will be terminated.\n")
