@@ -10,7 +10,7 @@ Ver 1.1
 1. Support download images from specified user.
 
 Ver 1.2
-1. Added checking file existance function. The tool will not download the same image again if that one already exists in directory.
+1. Added checking file existance function. The tool will not download the same image again if that one already exists in directory. (Using default file name to check)
 2. Bugs fixed.
 
 
