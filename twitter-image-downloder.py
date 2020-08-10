@@ -17,13 +17,13 @@ print("Here is the menu of this tool:\n", function1, function2)
 choice = int(input("What do you want to do with this tool? \n"))
 if (choice == 1):
     target = input("Which user do you want to download from? If you want to download from your favourites, enter nth. Otherwise enter UserID \n")
-    if (user != {}):
+    if (target != ""):
         mf.user_liked_images(api, target)
     else:
         mf.user_liked_images(api, user.userID)
 elif (choice == 2):
     timeline_user = input("Which user do you want to download from? Default is @muni_gurume \n")
-    if (timeline_user != {}):
+    if (timeline_user != "")
         tl.timeline_images(api, timeline_user)
     else:
         tl.timeline_images(api, "muni_gurume")
