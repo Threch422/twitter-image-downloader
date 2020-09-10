@@ -1,7 +1,7 @@
 # twitter-image-downloader
 For self-use and for fun
 
-Update: 7/8/2020
+Update: 10/9/2020
 
 Ver 1.0
 1.  Support download images from authenticated user
@@ -13,11 +13,14 @@ Ver 1.2
 1. Added checking file existance function. The tool will not download the same image again if that one already exists in directory. (Using default file name to check)
 2. Bugs fixed.
 
+Ver 1.3 10/9/2020
+1. Multiprocessing downloading is used, increasing speed of program.
+
 
 This tool is used to download the pictures you have liked in your Twitter account or from specific user.
 
 Requirments:
-1. Python 3.0 or above is required to run the tool.
+1. Python 3.3 or above is required to run the tool.
 2. tweepy is required for this tool.
 
 Tutorial to install tweepy:
