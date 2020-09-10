@@ -25,14 +25,14 @@ def user_liked_images(api,target):
                         fixed_path = original_path.split('.png')[0] + '?format=png&name=4096x4096'
                     image_url.append(fixed_path)
                     #print(tweets.extended_entities['media'])  # Debug use  
+    return image_url
 
+def download(index, images, length):    
     # Download it
-    for index, images in enumerate(image_url, 1):
-        file_name = user.path + images.split('?')[-2].split('/')[-1] + '.png'
-        # Check image existance in directory. Preventing reprtitive downloading.
-        if (os.path.isfile(file_name)):
-            continue
-        urllib.request.urlretrieve(images,file_name)
-        #print(file_name + "   " + str(index) + " / " + str(len(image_url))) # Debug use
-        print("Downloading: " + str(index) + " / " + str(len(image_url)))
-    print("The download progress has been done.")
+    file_name = user.path + images.split('?')[-2].split('/')[-1] + '.png'
+    # Check image existance in directory. Preventing reprtitive downloading.
+    if (os.path.isfile(file_name)):
+        return
+    urllib.request.urlretrieve(images,file_name)
+    #print(file_name + "   " + str(index) + " / " + str(len(image_url))) # Debug use
+    print("Downloading: " + str(index) + " / " + str(length))
