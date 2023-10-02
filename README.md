@@ -1,7 +1,8 @@
 # twitter-image-downloader
 For self-use and for fun
+**Remark: As twitter has updated the API policy, it is no longer that we can retrieve the tweet data with free access. This repo will be stopped for further update and development
 
-### Update: 10/9/2020
+### Last Update: 02/10/2023
 
 ## Update History
 Ver 1.0
